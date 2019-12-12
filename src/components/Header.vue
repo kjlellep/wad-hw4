@@ -1,13 +1,13 @@
 <template>
     <div class="container">
         <div class="date">
-            <h1>{{day}}</h1>
+            <h1>{{ day }}</h1>
             <div>
-                <h4 class="strong">{{month | uppercase | abbreviate }}</h4>
-                <h4>{{year}}</h4>
+                <h4 id="month" class="strong">{{ month | uppercase | abbreviate }}</h4>
+                <h4 id="year" >{{ year }}</h4>
             </div>
         </div>
-        <h4>{{weekday | uppercase}}</h4>
+        <h4 id="weekday" >{{ weekday | uppercase }}</h4>
     </div>
 </template>
 

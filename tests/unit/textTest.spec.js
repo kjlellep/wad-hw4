@@ -1,23 +1,11 @@
 import { mount } from '@vue/test-utils'
-import Header from '../../src/components/Header.vue'
+import List from '../../src/components/List.vue'
 
 describe('List text', () => {
 
-    const wrapper = mount(Header)
-
-    it('displays date correctly', () => {
-        expect(wrapper.html()).toContain('h3')
-    })
-
-    it('displays year correctly', () => {
-        expect(wrapper.html()).toContain('h3')
-    })
-
-    it('displays month correctly', () => {
-        expect(wrapper.html()).toContain('h3')
-    })
-
-    it('displays day of the week correctly', () => {
-        expect(wrapper.html()).toContain('h3')
+    const wrapper = mount(List)
+    it('displays text "Add your first Todo task" with empty list', () => {
+        const heading = wrapper.find('h3')
+        expect(heading.text()).toBe("Add your first Todo task")
     })
 });
